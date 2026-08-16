@@ -1,0 +1,50 @@
+GSE114134: 751,107 probes x 59 samples
+  allergic=39, control=20, majority baseline=0.661
+Traceback (most recent call last):
+  File "/home/ethan-xiao/food-allergy-biomarkers/within_cohort_signature.py", line 91, in <module>
+    aucs, freq = cv_run(raw_a, ya)
+                 ~~~~~~^^^^^^^^^^^
+  File "/home/ethan-xiao/food-allergy-biomarkers/within_cohort_signature.py", line 68, in cv_run
+    clf, Xte, selected = fold_funnel(Xtr_full, ytr, Xte_full)
+                         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ethan-xiao/food-allergy-biomarkers/within_cohort_signature.py", line 39, in fold_funnel
+    v = Xtr_full.var(axis=1)
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/util/_decorators.py", line 336, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/frame.py", line 14835, in var
+    result = super().var(
+        axis=axis, skipna=skipna, ddof=ddof, numeric_only=numeric_only, **kwargs
+    )
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/generic.py", line 11741, in var
+    return self._stat_function_ddof(
+           ~~~~~~~~~~~~~~~~~~~~~~~~^
+        "var", nanops.nanvar, axis, skipna, ddof, numeric_only, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/generic.py", line 11715, in _stat_function_ddof
+    return self._reduce(
+           ~~~~~~~~~~~~^
+        func, name, axis=axis, numeric_only=numeric_only, skipna=skipna, ddof=ddof
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/frame.py", line 13635, in _reduce
+    res = df._mgr.reduce(blk_func)
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/internals/managers.py", line 1694, in reduce
+    res_blocks = [blk.reduce(func) for blk in self.blocks]
+                  ~~~~~~~~~~^^^^^^
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/internals/blocks.py", line 358, in reduce
+    result = func(self.values)
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/frame.py", line 13565, in blk_func
+    return op(values, axis=axis, skipna=skipna, **kwds)
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/nanops.py", line 87, in _f
+    return f(*args, **kwargs)
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/nanops.py", line 149, in f
+    result = alt(values, axis=axis, skipna=skipna, **kwds)
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/pandas/core/nanops.py", line 1031, in nanvar
+    result = sqr.sum(axis=axis, dtype=np.float64) / d
+             ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ethan-xiao/food-allergy-biomarkers/fa-biomarkers-env/lib/python3.14/site-packages/numpy/_core/_methods.py", line 49, in _sum
+    return umr_sum(a, axis, dtype, out, keepdims, initial, where)
+KeyboardInterrupt

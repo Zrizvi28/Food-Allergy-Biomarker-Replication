@@ -1,0 +1,31 @@
+=== L2 / ridge variant ===
+GSE114134: 751,107 probes x 59 samples
+  allergic=39, control=20, majority baseline=0.661
+
+0.44 sec/fold -> ~15 min total
+
+Observed CV:
+    fold 0/100
+    fold 20/100
+    fold 40/100
+    fold 60/100
+    fold 80/100
+
+CV AUC: 0.692 (sd 0.112, 100 folds)
+
+Permutation null (200 perms):
+    perm 0/200
+    perm 20/200
+    perm 40/200
+    perm 60/200
+    perm 80/200
+    perm 100/200
+    perm 120/200
+    perm 140/200
+    perm 160/200
+    perm 180/200
+
+Null mean: 0.505 (sd 0.110)
+p = 0.0550
+
+Saved to within_cohort_results_L2.json
