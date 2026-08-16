@@ -1,0 +1,21 @@
+{
+  "features": [
+    "cg09821461",
+    "cg15076659",
+    "cg11090352",
+    "cg07202532",
+    "cg01220651",
+    "cg02407224",
+    "cg08469540",
+    "cg11305394",
+    "cg13858061",
+    "cg25316898",
+    "cg25610492"
+  ],
+  "n_features": 11,
+  "rationale": "10 FDR-significant DMPs from GSE114134 + cg25610492 (ISG15 shore neighbour)",
+  "auc_crosscohort_honest": 0.5428571428571429,
+  "auc_withincohort_CIRCULAR": 0.9942410714285714,
+  "auc_withincohort_sd": 0.013081118944174183,
+  "note": "The 0.994 is circular by construction: features were selected using this cohort, then evaluated on held-out folds of the same cohort. Reported only as a demonstration of the selection-bias failure mode documented in Alag 2019 and Kilicarslan 2025. The honest estimate is the cross-cohort 0.543."
+}

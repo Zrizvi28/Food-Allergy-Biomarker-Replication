@@ -1,2 +1,29 @@
+# python virtual environments
+fa-biomarkers-env/
+allergy-biomarker/
+
+# jupyter cruft
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# vendored/compiled R dependency - not our code
+preprocessCore/
+
+# large or raw data
+data/*.rds
+data/*.tar
+data/*.gz
 data/*.txt
-*.gz
+data/GSE189148_idats/
+data/GSE189148_suppl/
+
+# keep small result files even though they're inside data/
+!data/*.csv
+!data/*.json
+!data/*.png
+data/combat_noMod.npy
+data/combat_noMod.csv
+data/combat_noMod.csv
+data/raw_114134.csv
+data/raw_189148.csv

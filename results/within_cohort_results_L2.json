@@ -1,0 +1,20 @@
+{
+  "cohort": "GSE114134",
+  "n": 59,
+  "n_allergic": 39,
+  "n_control": 20,
+  "var_quantile": 0.8,
+  "top_n": 500,
+  "C": 1.0,
+  "solver": "lbfgs",
+  "penalty": "l2",
+  "cv": "5-fold x 20 repeats",
+  "n_perm": 200,
+  "perm_cv": "5-fold x 2 repeats",
+  "cv_auc_mean": 0.692232142857143,
+  "cv_auc_sd": 0.1119491545369174,
+  "null_mean": 0.5046808035714285,
+  "null_sd": 0.11014966172493236,
+  "p": 0.055,
+  "note": "L2 robustness check on L1 result (AUC 0.538, p 0.34)"
+}

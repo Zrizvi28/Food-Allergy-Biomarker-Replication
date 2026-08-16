@@ -1,0 +1,30 @@
+{
+  "design": "cross-cohort, no ComBat, per-cohort standardization",
+  "n_train_A": 59,
+  "n_train_B": 43,
+  "var_quantile": 0.8,
+  "top_n": 2000,
+  "C": 1,
+  "n_perm": 1000,
+  "foldA": {
+    "direction": "GSE114134 (infant) -> GSE189148 (adolescent)",
+    "auc": 0.4976190476190476,
+    "null_mean": 0.5013,
+    "null_sd": 0.058127034819185026,
+    "p": 0.535
+  },
+  "foldB": {
+    "direction": "GSE189148 (adolescent) -> GSE114134 (infant)",
+    "auc": 0.5897435897435898,
+    "null_mean": 0.5512038461538461,
+    "null_sd": 0.10450523108971654,
+    "p": 0.367
+  },
+  "feature_overlap": 16,
+  "overlap_expected_by_chance": 26.627258324346634,
+  "auc_combat_foldA": 0.536,
+  "stability_max_freq": {
+    "foldA": 0.168,
+    "foldB": 0.18
+  }
+}
