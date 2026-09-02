@@ -5,7 +5,7 @@ Computational investigation of molecular signatures associated with food allergy
 Which molecular signatures distinguish food allergy, and how robust and informative are they across datasets? Can they support effective classification?
 
 ## Approach:
-The project evaluates candidate molecular signatures through several complementary analyses:
+The project evaluates candidate molecular signatures through several analyses:
 
 - Differential DNA methylation analysis
 - Cross-cohort comparison
@@ -18,9 +18,9 @@ The project evaluates candidate molecular signatures through several complementa
 This project did not stop at statistical significance but considered signal strength, predictive performance, replication, biological coherence, all while maintaining rigor by identifying and removing common sources of data leakage in the computational food allergy space.
 
 ## Current datasets
-GSE114134 — infants (~12 months), n = 59 (39 allergic / 20 control)
+GSE114134: infants (~12 months), n = 59 (39 allergic / 20 control)
 
-GSE189148 — adolescents (10–15 years, resting/unstimulated), n = 43 (30 allergic / 13 control)
+GSE189148: adolescents (10–15 years, resting/unstimulated), n = 43 (30 allergic / 13 control)
 
 Both provide publicly available molecular data relevant to food allergy and are used to investigate whether candidate signals persist across independent cohorts.
 
@@ -34,6 +34,8 @@ results/     Figures and outputs
 
 ### Classification
 Within-cohort (GSE114134):	AUC 0.532, p-value 0.365 (~chance, not significant)
+
+Within-cohort (GSE114134), L2/ridge regularization: AUC 0.692, p-value 0.055 (borderline significant) Regularization choice affected the result, but neither is a definitive classification
 
 GSE114134 → GSE189148: AUC	0.498, p-value	0.535 (~chance, not significant)
 
